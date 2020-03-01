@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2019-10-19 15:17+0900\n"
+"POT-Creation-Date: 2020-03-01 22:33+0900\n"
+"PO-Revision-Date: 2020-03-01 23:42+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -2777,17 +2777,14 @@ msgstr ""
 
 #. type: defun
 #: original_texis/lists.texi:1559
-#, fuzzy, no-wrap
-#| msgid "alist-get key value &optional default remove"
+#, no-wrap
 msgid "alist-get key alist &optional default remove"
-msgstr "alist-get key value &optional default remove"
+msgstr "alist-get key alist &optional default remove"
 
 #. type: defun
 #: original_texis/lists.texi:1564
-#, fuzzy
-#| msgid "This function is like @code{assq}, but instead of returning the entire association for @var{key}, @code{(@var{key} . @var{value})}, it returns just the @var{value}.  If @var{key} is not found in @var{alist} it returns @var{default}."
 msgid "This function is like @code{assq}, but instead of returning the entire association for @var{key} in @var{alist}, @w{@code{(@var{key} . @var{value})}}, it returns just the @var{value}.  If @var{key} is not found in @var{alist}, it returns @var{default}."
-msgstr "この関数は@code{assq}と似ているが、@var{key}にたいする連想値全体@code{(@var{key} . @var{value})}ではなく、@var{value}だけをリターンする点が異なる。@var{key}が@var{alist}内で見つからなければ@var{default}をリターンする。"
+msgstr "この関数は@code{assq}と似ているが、@var{alist}内の@var{key}にたいする連想値全体@code{(@var{key} . @var{value})}ではなく、@var{value}だけをリターンする点が異なる。@var{key}が@var{alist}内で見つからなければ@var{default}をリターンする。"
 
 #. type: defun
 #: original_texis/lists.texi:1569
