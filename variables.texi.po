@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:49+0900\n"
-"PO-Revision-Date: 2019-10-23 00:37+0900\n"
+"PO-Revision-Date: 2020-03-02 22:58+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -490,30 +490,24 @@ msgstr ""
 #. type: defspec
 #: original_texis/variables.texi:227
 msgid "On the other hand, the order of @emph{bindings} is unspecified: in the following example, either 1 or 2 might be printed."
-msgstr ""
+msgstr "その一方で@emph{bindings}の順序は指定されない。以下の例では1か2のどちらかがプリントされる。"
 
 #. type: example
 #: original_texis/variables.texi:232
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(let ((y 1)\n"
-#| "      (z y))\n"
-#| "  (list y z))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(let ((x 1)\n"
 "      (x 2))\n"
 "  (print x))\n"
 msgstr ""
-"(let ((y 1)\n"
-"      (z y))\n"
-"  (list y z))\n"
-"     @result{} (1 2)\n"
+"(let ((x 1)\n"
+"      (x 2))\n"
+"  (print x))\n"
 
 #. type: defspec
 #: original_texis/variables.texi:236
 msgid "Therefore, avoid binding a variable more than once in a single @code{let} form."
-msgstr ""
+msgstr "したがって単一の@code{let}フォーム内で変数を複数回バインディングするのは避けること。"
 
 #. type: defspec
 #: original_texis/variables.texi:238
@@ -2697,26 +2691,24 @@ msgstr ""
 #. type: Plain text
 #: original_texis/variables.texi:1590
 msgid "A variable can be let-bound (@pxref{Local Variables}) to a value.  This makes its global value shadowed by the binding; @code{default-value} will then return the value from that binding, not the global value, and @code{set-default} will be prevented from setting the global value (it will change the let-bound value instead).  The following two functions allow to reference the global value even if it's shadowed by a let-binding."
-msgstr ""
+msgstr "ある変数に値をletバインドできます(@ref{Local Variables}を参照)。このバインディングにより変数のグローバル値はシャドーされます。@code{default-value}はグローバル値ではなくそのバインディングの値をリターンして、@code{set-default}によるグローバル値のセットは防がれます(かわりにletバインドされた値が変更される)。以下の2つの関数によりletバインドでグローバル値がシャドーされていてもグローバル値を参照できます。"
 
 #. type: cindex
 #: original_texis/variables.texi:1591
-#, fuzzy, no-wrap
-#| msgid "default value"
+#, no-wrap
 msgid "top-level default value"
-msgstr "default value"
+msgstr "top-level default value"
 
 #. type: defun
 #: original_texis/variables.texi:1592
-#, fuzzy, no-wrap
-#| msgid "default-value symbol"
+#, no-wrap
 msgid "default-toplevel-value symbol"
-msgstr "default-value symbol"
+msgstr "default-toplevel-value symbol"
 
 #. type: defun
 #: original_texis/variables.texi:1595
 msgid "This function returns the @dfn{top-level} default value of @var{symbol}, which is its value outside of any let-binding."
-msgstr ""
+msgstr "この関数は@var{symbol}にたいするすべてのletバインディングの外部の値として@dfn{トップレベル}のデフォルト値をリターンする。"
 
 #. type: group
 #: original_texis/variables.texi:1601
@@ -2725,6 +2717,8 @@ msgid ""
 "(defvar variable 'global-value)\n"
 "    @result{} variable\n"
 msgstr ""
+"(defvar variable 'global-value)\n"
+"    @result{} variable\n"
 
 #. type: group
 #: original_texis/variables.texi:1606
@@ -2734,6 +2728,9 @@ msgid ""
 "  (default-value 'variable))\n"
 "    @result{} let-binding\n"
 msgstr ""
+"(let ((variable 'let-binding))\n"
+"  (default-value 'variable))\n"
+"    @result{} let-binding\n"
 
 #. type: group
 #: original_texis/variables.texi:1611
@@ -2743,18 +2740,20 @@ msgid ""
 "  (default-toplevel-value 'variable))\n"
 "    @result{} global-value\n"
 msgstr ""
+"(let ((variable 'let-binding))\n"
+"  (default-toplevel-value 'variable))\n"
+"    @result{} global-value\n"
 
 #. type: defun
 #: original_texis/variables.texi:1614
-#, fuzzy, no-wrap
-#| msgid "set-default symbol value"
+#, no-wrap
 msgid "set-default-toplevel-value symbol value"
-msgstr "set-default symbol value"
+msgstr "set-default-toplevel-value symbol value"
 
 #. type: defun
 #: original_texis/variables.texi:1619
 msgid "This function sets the top-level default value of @var{symbol} to the specified @var{value}.  This comes in handy when you want to set the global value of @var{symbol} regardless of whether your code runs in the context of @var{symbol}'s let-binding."
-msgstr ""
+msgstr "この関数は@var{symbol}のトップレベルのデフォルト値に指定された@var{value}をセットする。これはコードが@var{symbol}のletバインディングのコンテキスト下で実行中かどうかとは無関係に@var{symbol}のグローバル値をセットしたいときに便利。"
 
 #. type: cindex
 #: original_texis/variables.texi:1624
