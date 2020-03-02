@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2019-10-22 06:52+0900\n"
+"PO-Revision-Date: 2020-03-02 22:23+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -633,6 +633,9 @@ msgstr "(app @var{function} @var{upattern})"
 #: original_texis/control.texi:374
 msgid "Matches if @var{function} applied to the value being matched returns a value that matches @var{upattern}.  This is like the @code{pred} UPattern, except that it tests the result against @var{upattern}, rather than against a boolean truth value.  The @var{function} call can use one of the forms described below."
 msgstr ""
+"値に@var{function}を適用してリターンされた値が@var{upattern}にマッチすればマッチ。\n"
+"Matches if  applied to the value being matched returns a value that matches .\n"
+"これはUPatternの@code{pred}と似ているが、これは結果を真偽値ではなく@var{upattern}にたいしてテストする点が異なる。@var{function}呼び出しは後述のいずれかのフォームを使用できる。"
 
 #. type: item
 #: original_texis/control.texi:374
@@ -1300,6 +1303,12 @@ msgid ""
 "  -1)\n"
 "\n"
 msgstr ""
+"(require 'generator)\n"
+"(iter-defun my-iter (x)\n"
+"  (iter-yield (1+ (iter-yield (1+ x))))\n"
+"   ;; 普通にリターンする\n"
+"  -1)\n"
+"\n"
 
 #. type: example
 #: original_texis/control.texi:822
