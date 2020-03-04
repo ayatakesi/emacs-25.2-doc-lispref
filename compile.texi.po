@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 24.5\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2019-10-28 01:01+0900\n"
+"PO-Revision-Date: 2020-03-04 21:46+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -243,17 +243,14 @@ msgstr "@code{byte-compile}により、関数やマクロを個別にバイト�
 
 #. type: vindex
 #: original_texis/compile.texi:91
-#, fuzzy, no-wrap
-#| msgid "byte-compile-dynamic"
+#, no-wrap
 msgid "byte-compile-debug"
-msgstr "byte-compile-dynamic"
+msgstr "byte-compile-debug"
 
 #. type: Plain text
 #: original_texis/compile.texi:99
-#, fuzzy
-#| msgid "Sometimes, the byte compiler produces warning and/or error messages (@pxref{Compiler Errors}, for details).  These messages are recorded in a buffer called @file{*Compile-Log*}, which uses Compilation mode.  @xref{Compilation Mode,,,emacs, The GNU Emacs Manual}."
 msgid "Sometimes, the byte compiler produces warning and/or error messages (@pxref{Compiler Errors}, for details).  These messages are normally recorded in a buffer called @file{*Compile-Log*}, which uses Compilation mode.  @xref{Compilation Mode,,,emacs, The GNU Emacs Manual}.  However, if the variable @code{byte-compile-debug} is non-nil, error message will be signaled as Lisp errors instead (@pxref{Errors})."
-msgstr "バイトコンパイラーが警告、および/またはエラーメッセージを生成することもあります(詳細は@ref{Compiler Errors}を参照)。これらのメッセージはCompilationモードが使用する@file{*Compile-Log*}と呼ばれるバッファーに記録されます。@ref{Compilation Mode,,,emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "バイトコンパイラーが警告および/またはエラーメッセージを生成することもあります(詳細は@ref{Compiler Errors}を参照)。これらのメッセージは通常はCompilationモードが使用する@file{*Compile-Log*}と呼ばれるバッファーに記録されます。@ref{Compilation Mode,,,emacs, The GNU Emacs Manual}を参照してください。しかし変数@code{byte-compile-debug}が非nilならエラーメッセージはかわりにLispエラーをシグナルする(@ref{Errors}を参照)。"
 
 #. type: cindex
 #: original_texis/compile.texi:100
