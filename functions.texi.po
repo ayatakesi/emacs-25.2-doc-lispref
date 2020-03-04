@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2019-10-24 19:47+0900\n"
+"PO-Revision-Date: 2020-03-04 21:12+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -118,7 +118,7 @@ msgstr "Generic Functions"
 #. type: menuentry
 #: original_texis/functions.texi:33
 msgid "Polymorphism, Emacs-style."
-msgstr ""
+msgstr "▽えまスタイルのポリモーフィズム。"
 
 #. type: node
 #: original_texis/functions.texi:33 original_texis/functions.texi:1321
@@ -691,10 +691,8 @@ msgstr "argument lists, features"
 
 #. type: Plain text
 #: original_texis/functions.texi:323
-#, fuzzy
-#| msgid "Our simple sample function, @code{(lambda (a b c) (+ a b c))}, specifies three argument variables, so it must be called with three arguments: if you try to call it with only two arguments or four arguments, you get a @code{wrong-number-of-arguments} error."
 msgid "Our simple sample function, @code{(lambda (a b c) (+ a b c))}, specifies three argument variables, so it must be called with three arguments: if you try to call it with only two arguments or four arguments, you get a @code{wrong-number-of-arguments} error (@pxref{Errors})."
-msgstr "シンプルなサンプル関数@code{(lambda (a b c) (+ a b c))}は、3つの引数変数を指定しているので、3つの引数で呼び出されなければなりません。引数を2つしか指定しなかったり4つ指定した場合は、@code{wrong-number-of-arguments}エラーとなります。"
+msgstr "シンプルなサンプル関数@code{(lambda (a b c) (+ a b c))}は3つの引数変数を指定しているので、3つの引数で呼び出されなければなりません。引数を2つしか指定しなかったり4つ指定した場合には@code{wrong-number-of-arguments}エラーとなります(@ref{Errors}を参照)。"
 
 #. type: Plain text
 #: original_texis/functions.texi:331
@@ -3619,14 +3617,14 @@ msgstr "高速かつシンプルにするために、@code{unsafep}は非常に�
 #: original_texis/functions.texi:2257
 #, no-wrap
 msgid "Safe expression"
-msgstr ""
+msgstr "Safe expression"
 
 # grouped by @ignore.
 #. type: itemize
 #: original_texis/functions.texi:2261
 #, no-wrap
 msgid "An atom or quoted thing.\n"
-msgstr ""
+msgstr "An atom or quoted thing.\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3636,6 +3634,8 @@ msgid ""
 "A call to a safe function (see below), if all its arguments are\n"
 "safe expressions.\n"
 msgstr ""
+"A call to a safe function (see below), if all its arguments are\n"
+"safe expressions.\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3647,6 +3647,10 @@ msgid ""
 "@code{while}, and @code{unwind-protect}], if all its arguments are\n"
 "safe.\n"
 msgstr ""
+"One of the special forms @code{and}, @code{catch}, @code{cond},\n"
+"@code{if}, @code{or}, @code{prog1}, @code{prog2}, @code{progn},\n"
+"@code{while}, and @code{unwind-protect}], if all its arguments are\n"
+"safe.\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3658,6 +3662,10 @@ msgid ""
 "@code{let*}), if all args are safe and the symbols to be bound are not\n"
 "explicitly risky (see @pxref{File Local Variables}).\n"
 msgstr ""
+"A form that creates temporary bindings (@code{condition-case},\n"
+"@code{dolist}, @code{dotimes}, @code{lambda}, @code{let}, or\n"
+"@code{let*}), if all args are safe and the symbols to be bound are not\n"
+"explicitly risky (see @pxref{File Local Variables}).\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3669,6 +3677,10 @@ msgid ""
 "not explicitly risky and they already have temporary or buffer-local\n"
 "bindings.\n"
 msgstr ""
+"An assignment using @code{add-to-list}, @code{setq}, @code{push}, or\n"
+"@code{pop}, if all args are safe and the symbols to be assigned are\n"
+"not explicitly risky and they already have temporary or buffer-local\n"
+"bindings.\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3678,34 +3690,36 @@ msgid ""
 "One of [apply, mapc, mapcar, mapconcat] if the first argument is a\n"
 "safe explicit lambda and the other args are safe expressions.\n"
 msgstr ""
+"One of [apply, mapc, mapcar, mapconcat] if the first argument is a\n"
+"safe explicit lambda and the other args are safe expressions.\n"
 
 # grouped by @ignore.
 #. type: item
 #: original_texis/functions.texi:2284
 #, no-wrap
 msgid "Safe function"
-msgstr ""
+msgstr "Safe function"
 
 # grouped by @ignore.
 #. type: itemize
 #: original_texis/functions.texi:2288
 #, no-wrap
 msgid "A lambda containing safe expressions.\n"
-msgstr ""
+msgstr "A lambda containing safe expressions.\n"
 
 # grouped by @ignore.
 #. type: itemize
 #: original_texis/functions.texi:2290
 #, no-wrap
 msgid "A symbol on the list @code{safe-functions}, so the user says it's safe.\n"
-msgstr ""
+msgstr "A symbol on the list @code{safe-functions}, so the user says it's safe.\n"
 
 # grouped by @ignore.
 #. type: itemize
 #: original_texis/functions.texi:2292
 #, no-wrap
 msgid "A symbol with a non-@code{nil} @code{side-effect-free} property.\n"
-msgstr ""
+msgstr "A symbol with a non-@code{nil} @code{side-effect-free} property.\n"
 
 # grouped by @ignore.
 #. type: itemize
@@ -3717,6 +3731,10 @@ msgid ""
 "side effects.  Other values will someday indicate functions with\n"
 "classes of side effects that are not always safe.\n"
 msgstr ""
+"A symbol with a non-@code{nil} @code{safe-function} property.  The\n"
+"value @code{t} indicates a function that is safe but has innocuous\n"
+"side effects.  Other values will someday indicate functions with\n"
+"classes of side effects that are not always safe.\n"
 
 # grouped by @ignore.
 #. type: table
@@ -3728,6 +3746,10 @@ msgid ""
 "defined in @file{subr.el}.  You can assign these properties for the\n"
 "functions you write.\n"
 msgstr ""
+"The @code{side-effect-free} and @code{safe-function} properties are\n"
+"provided for built-in functions and for low-level functions and macros\n"
+"defined in @file{subr.el}.  You can assign these properties for the\n"
+"functions you write.\n"
 
 #. type: section
 #: original_texis/functions.texi:2307
