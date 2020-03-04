@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-24.5\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2019-11-02 16:07+0900\n"
+"PO-Revision-Date: 2020-03-05 01:06+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -359,18 +359,18 @@ msgstr "@code{debug-on-signal}を非@code{nil}値に変更すると、@code{cond
 #: original_texis/debugging.texi:155
 #, no-wrap
 msgid "emacsclient, getting a backtrace"
-msgstr ""
+msgstr "emacsclient, getting a backtrace"
 
 #. type: cindex
 #: original_texis/debugging.texi:156
 #, no-wrap
 msgid "backtrace from emacsclient's @option{--eval}"
-msgstr ""
+msgstr "backtrace from emacsclient's @option{--eval}"
 
 #. type: defopt
 #: original_texis/debugging.texi:161
 msgid "For example, setting this variable is useful to get a backtrace from code evaluated by emacsclient's @option{--eval} option.  If Lisp code evaluated by emacsclient signals an error while this variable is non-@code{nil}, the backtrace will popup in the running Emacs."
-msgstr ""
+msgstr "たとえばemacsclientの@option{--eval}オプションによるコードの評価からバックトレースを取得するためにはこの変数をセットすると便利。この変数が非@code{nil}のときにemacsclientで評価されたLispコードがエラーをシグナルすると、バックトレースは実行中のEmacsにポップアップされる。"
 
 #. type: defopt
 #: original_texis/debugging.texi:168
@@ -1163,7 +1163,7 @@ msgstr "普通のグローバル変数ではなくこの変数を使用する利
 #. type: defvar
 #: original_texis/debugging.texi:666
 msgid "This variable is obsolete and will be removed in future versions."
-msgstr ""
+msgstr "この変数は時代遅れであり将来のバージョンで削除されるだろう。"
 
 #. type: defun
 #: original_texis/debugging.texi:668
