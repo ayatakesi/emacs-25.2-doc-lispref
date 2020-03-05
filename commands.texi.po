@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2020-01-06 03:05+0900\n"
+"PO-Revision-Date: 2020-03-06 08:04+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1047,10 +1047,8 @@ msgstr "region argument"
 
 #. type: table
 #: original_texis/commands.texi:489
-#, fuzzy
-#| msgid "Point and the mark, as two numeric arguments, smallest first.  This is the only code letter that specifies two successive arguments rather than one.  No I/O."
 msgid "Point and the mark, as two numeric arguments, smallest first.  This is the only code letter that specifies two successive arguments rather than one.  This will signal an error if the mark is not set in the buffer which is current when the command is invoked.  No I/O."
-msgstr "2つの数引数(ポイントとマーク)。小さいほうが先。これは1つではなく連続する2つの引数を指定する唯一のコード文字である。[No I/O]"
+msgstr "2つの数引数(ポイントとマーク)。小さいほうが先。これは1つではなく連続する2つの引数を指定する唯一のコード文字である。コマンド呼び出し時にカレントなバッファーにマークがセットされていなければエラーをシグナルする。[No I/O]"
 
 #. type: item
 #: original_texis/commands.texi:490
