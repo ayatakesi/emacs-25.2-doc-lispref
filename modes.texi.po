@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2019-11-24 00:51+0900\n"
+"PO-Revision-Date: 2020-03-07 03:46+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -35,10 +35,8 @@ msgstr "mode"
 
 #. type: Plain text
 #: original_texis/modes.texi:16
-#, fuzzy
-#| msgid "A @dfn{mode} is a set of definitions that customize Emacs and can be turned on and off while you edit.  There are two varieties of modes: @dfn{major modes}, which are mutually exclusive and used for editing particular kinds of text, and @dfn{minor modes}, which provide features that users can enable individually."
 msgid "A @dfn{mode} is a set of definitions that customize Emacs behavior in useful ways.  There are two varieties of modes: @dfn{minor modes}, which provide features that users can turn on and off while editing; and @dfn{major modes}, which are used for editing or interacting with a particular kind of text.  Each buffer has exactly one @dfn{major mode} at a time."
-msgstr "@dfn{モード(mode)}とは、Emacsをカスタマイズする定義のセットであり、編集時にオン/オフを切り替えることができます。モードには2つの種類があります。@dfn{メジャーモード(major modes)}とは、互いに排他なモードであり、特定の種類のテキストの編集にたいして使用されます。@dfn{マイナーモード(minor modes)}とは、ユーザーが個別に有効にすることができる機能を提供します。"
+msgstr "@dfn{モード(mode)}とはEmacsの挙動を簡便な方法でカスタマイズする定義のセットです。モードは2種類あります。@dfn{マイナーモード(minor modes)}は編集時にユーザーがオンとオフを切り替えられる機能を提供します。@dfn{メジャーモード(major modes)}は特定の種類のテキストにたいする編集や相互作用に使用します。ある時点においてバッファーはそれぞれ正確に1つの@dfn{メジャーモード}をもちます。"
 
 #. type: Plain text
 #: original_texis/modes.texi:21
@@ -370,10 +368,8 @@ msgstr "major mode command"
 
 #. type: Plain text
 #: original_texis/modes.texi:209
-#, fuzzy
-#| msgid "Major modes specialize Emacs for editing particular kinds of text.  Each buffer has one major mode at a time.  Every major mode is associated with a @dfn{major mode command}, whose name should end in @samp{-mode}.  This command takes care of switching to that mode in the current buffer, by setting various buffer-local variables such as a local keymap.  @xref{Major Mode Conventions}."
 msgid "Major modes specialize Emacs for editing or interacting with particular kinds of text.  Each buffer has exactly one major mode at a time.  Every major mode is associated with a @dfn{major mode command}, whose name should end in @samp{-mode}.  This command takes care of switching to that mode in the current buffer, by setting various buffer-local variables such as a local keymap.  @xref{Major Mode Conventions}.  Note that unlike minor modes there is no way to ``turn off'' a major mode, instead the buffer must be switched to a different one."
-msgstr "メジャーモードは特定の種類のテキスト編集にEmacsを特化します。すべてのバッファーは一度に1つのメジャーモードをもちます。すべてのメジャーモードは、@dfn{メジャーモードコマンド(major mode command)}に関連付けられ、そのコマンド名は@samp{-mode}で終わるべきです。このコマンドは、ローカルキーマップのようなさまざまなバッファーローカル変数をセットすることにより、カレントバッファーないでそのモードに切り替える配慮をします。@ref{Major Mode Conventions}を参照してください。"
+msgstr "メジャーモードは特定の種類のテキストの編集や相互作用にたいしてEmacsを特化します。すべてのバッファーは一度に1つのメジャーモードをもちます。すべてのメジャーモードは、@dfn{メジャーモードコマンド(major mode command)}に関連付けられ、そのコマンド名は@samp{-mode}で終わるべきです。このコマンドは、ローカルキーマップのようなさまざまなバッファーローカル変数をセットすることにより、カレントバッファーないでそのモードに切り替える配慮をします。@ref{Major Mode Conventions}を参照してください。マイナーモードとは異なりメジャーモードを``オフに切り替える''手段は存在せず、かわりにバッファーは別のメジャーモードに切り替えられなければなりません。"
 
 #. type: Plain text
 #: original_texis/modes.texi:212
@@ -1191,10 +1187,7 @@ msgstr "以下は架空の例:"
 
 #. type: example
 #: original_texis/modes.texi:813
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(define-key hypertext-mode-map\n"
-#| "  [down-mouse-3] 'do-hyper-link)\n"
+#, no-wrap
 msgid ""
 "(defvar hypertext-mode-map\n"
 "  (let ((map (make-sparse-keymap)))\n"
@@ -1202,19 +1195,15 @@ msgid ""
 "    map))\n"
 "\n"
 msgstr ""
-"(define-key hypertext-mode-map\n"
-"  [down-mouse-3] 'do-hyper-link)\n"
+"(defvar hypertext-mode-map\n"
+"  (let ((map (make-sparse-keymap)))\n"
+"    (define-key map [down-mouse-3] 'do-hyper-link)\n"
+"    map))\n"
+"\n"
 
 #. type: example
 #: original_texis/modes.texi:818
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(define-derived-mode hypertext-mode\n"
-#| "  text-mode \"Hypertext\"\n"
-#| "  \"Major mode for hypertext.\n"
-#| "\\\\@{hypertext-mode-map@}\"\n"
-#| "  (setq case-fold-search nil))\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "(define-derived-mode hypertext-mode\n"
 "  text-mode \"Hypertext\"\n"
@@ -1223,10 +1212,8 @@ msgid ""
 msgstr ""
 "(define-derived-mode hypertext-mode\n"
 "  text-mode \"Hypertext\"\n"
-"  \"ハイパーテキスト用のメジャーモード\n"
-"\\\\@{hypertext-mode-map@}\"\n"
-"  (setq case-fold-search nil))\n"
-"\n"
+"  \"ハイパーテキスト用のメジャーモード\"\n"
+"  (setq-local case-fold-search nil))\n"
 
 #. type: defmac
 #: original_texis/modes.texi:822
@@ -4463,10 +4450,8 @@ msgstr "font-lock-remove-keywords mode keywords"
 
 #. type: defun
 #: original_texis/modes.texi:2927
-#, fuzzy
-#| msgid "This function removes @var{keywords} from @code{font-lock-keywords} for the current buffer or for major mode @var{mode}.  As in @code{font-lock-add-keywords}, @var{mode} should be a major mode command name or @code{nil}.  All the caveats and requirements for @code{font-lock-add-keywords} apply here too."
 msgid "This function removes @var{keywords} from @code{font-lock-keywords} for the current buffer or for major mode @var{mode}.  As in @code{font-lock-add-keywords}, @var{mode} should be a major mode command name or @code{nil}.  All the caveats and requirements for @code{font-lock-add-keywords} apply here too.  The argument @var{keywords} must exactly match the one used by the corresponding @code{font-lock-add-keywords}."
-msgstr "この関数は、カレントバッファー、またはメジャーモード@var{mode}にたいして、@code{font-lock-keywords}から@var{keywords}を削除する。@code{font-lock-add-keywords}の場合と同様、@var{mode}はメジャーモードコマンド名か@code{nil}であること。@code{font-lock-add-keywords}にたいするすべての制約と条件は、この関数にも適用される。"
+msgstr "この関数はカレントバッファーやメジャーモード@var{mode}にたいして、@code{font-lock-keywords}から@var{keywords}を削除する。@code{font-lock-add-keywords}の場合と同様に@var{mode}はメジャーモードコマンド名か@code{nil}であること。この関数にも@code{font-lock-add-keywords}にたいするすべての制約と条件が適用される。引数@var{keywords}は対応する@code{font-lock-add-keywords}が使用するキーワードと正確に一致しなければならない。"
 
 #. type: Plain text
 #: original_texis/modes.texi:2933
