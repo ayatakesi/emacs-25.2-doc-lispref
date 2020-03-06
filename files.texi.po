@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2019-12-15 16:14+0900\n"
+"PO-Revision-Date: 2020-03-07 04:34+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -650,7 +650,7 @@ msgstr "@var{filename}が既存のディレクトリーや既存のディレク�
 #. type: Plain text
 #: original_texis/files.texi:411
 msgid "Saving a buffer runs several hooks.  It also performs format conversion (@pxref{Format Conversion}).  Note that these hooks, described below, are only run by @code{save-buffer}, they are not run by other primitives and functions that write buffer text to files, and in particular auto-saving (@pxref{Auto-Saving}) doesn't run these hooks."
-msgstr ""
+msgstr "バッファーの保存によりフックがいくつか実行されます。これによりフォーマット変換も処理されます(@ref{Format Conversion}を参照)。以下で説明するこれらのフックはバッファーのテキストをファイルに書き込む@code{save-buffer}以外の他のプリミティブや関数、とりわけauto-saving (@ref{Auto-Saving}を参照)では実行されないことに注意してください。"
 
 #. type: defvar
 #: original_texis/files.texi:412
@@ -1746,18 +1746,18 @@ msgstr "この関数は、@var{file}がディレクトリー@var{dir}内のフ�
 #: original_texis/files.texi:1145
 #, no-wrap
 msgid "vc-responsible-backend file"
-msgstr ""
+msgstr "vc-responsible-backend file"
 
 #. type: defun
 #: original_texis/files.texi:1154
 msgid "This function determines the responsible VC backend of the given @var{file}.  For example, if @file{emacs.c} is a file tracked by Git, @w{@code{(vc-responsible-backend \"emacs.c\")}} returns @samp{Git}.  Note that if @var{file} is a symbolic link, @code{vc-responsible-backend} will not resolve it---the backend of the symbolic link file itself is reported.  To get the backend VC of the file to which @var{file} refers, wrap @var{file} with a symbolic link resolving function such as @code{file-chase-links}:"
-msgstr ""
+msgstr "この関数は与えられた@var{file}にたいしてVCバックエンドが責任を負うかどうかを判断する。たとえば@file{emacs.c}がGitでトラック(track: 追跡)されていれば@w{@code{(vc-responsible-backend \"emacs.c\")}}は@samp{Git}をリターンする。@var{file}がシンボリックリンクなら@code{vc-responsible-backend}はシンボリックリンクを解決せずに、シンボリックリンクにたいするバックエンドが報告されることに注意。@var{file}が参照するファイルのバックエンドVCを取得するには、@code{file-chase-links}のようなシンボリックリンク解決用の関数で@var{file}をラップすること。"
 
 #. type: smallexample
 #: original_texis/files.texi:1157
 #, no-wrap
 msgid "(vc-responsible-backend (file-chase-links \"emacs.c\"))\n"
-msgstr ""
+msgstr "(vc-responsible-backend (file-chase-links \"emacs.c\"))\n"
 
 #. type: cindex
 #: original_texis/files.texi:1162
@@ -3431,7 +3431,7 @@ msgstr "abbreviated file names"
 #: original_texis/files.texi:2158
 #, no-wrap
 msgid "directory-abbrev-alist"
-msgstr ""
+msgstr "directory-abbrev-alist"
 
 #. type: defun
 #: original_texis/files.texi:2159
