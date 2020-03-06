@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2019-12-22 16:45+0900\n"
+"PO-Revision-Date: 2020-03-07 04:40+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -875,7 +875,7 @@ msgstr "この変数の値を変更した際、バッファー内でauto-saveモ
 #. type: defopt
 #: original_texis/backups.texi:553
 msgid "Note that setting this variable to a non-@code{nil} value does not change the fact that auto-saving is different from saving the buffer; e.g., the hooks described in @ref{Saving Buffers} are @emph{not} run when a buffer is auto-saved."
-msgstr ""
+msgstr "この変数を非@code{nil}にセットしても自動保存とバッファーの保存は異なるという事実は変わらないことに注意(@ref{Saving Buffers}で説明したフックはバッファーが自動保存された際には@emph{実行されない})。"
 
 #. type: defun
 #: original_texis/backups.texi:555
