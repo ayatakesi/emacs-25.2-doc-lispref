@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2020-03-02 20:45+0900\n"
+"PO-Revision-Date: 2020-03-08 08:39+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1595,10 +1595,8 @@ msgstr "darwin"
 
 #. type: table
 #: original_texis/os.texi:892
-#, fuzzy
-#| msgid "Darwin (Mac OS X)."
 msgid "Darwin (macOS)."
-msgstr "Darwin (Mac OS X)。"
+msgstr "Darwin (macOS)."
 
 #. type: item
 #: original_texis/os.texi:893
@@ -1918,10 +1916,8 @@ msgstr "invocation-directory"
 
 #. type: defvar
 #: original_texis/os.texi:1063
-#, fuzzy
-#| msgid "This variable holds the directory from which the Emacs executable was invoked, or @code{nil} if that directory cannot be determined."
 msgid "This variable holds the directory in which the Emacs executable was located when it was run, or @code{nil} if that directory cannot be determined."
-msgstr "この変数は、Emacs実行可能形式が呼び出されたディレクトリー名、そのディレクトリーが判断できなければ@code{nil}をリターンする。"
+msgstr "この変数はEmacs実行可能形式が実行されたときに配置されていたディレクトリー名、ディレクトリーが判断できなければ@code{nil}をリターンする。"
 
 #. type: defvar
 #: original_texis/os.texi:1065
@@ -2615,10 +2611,10 @@ msgstr "format-time-string format-string &optional time zone"
 
 #. type: defun
 #: original_texis/os.texi:1482
-#, fuzzy
-#| msgid "This function converts @var{time} (or the current time, if @var{time} is omitted) to a string according to @var{format-string}.  The argument @var{format-string} may contain @samp{%}-sequences which say to substitute parts of the time.  Here is a table of what the @samp{%}-sequences mean:"
 msgid "This function converts @var{time} (or the current time, if @var{time} is omitted or @code{nil}) to a string according to @var{format-string}.  The conversion uses the time zone rule @var{zone}, which defaults to the current time zone rule.  @xref{Time Zone Rules}.  The argument @var{format-string} may contain @samp{%}-sequences which say to substitute parts of the time.  Here is a table of what the @samp{%}-sequences mean:"
-msgstr "この関数は@var{time}(省略時はカレント時刻)を、@var{format-string}に応じて文字列に変換する。引数@var{format-string}には、時刻を置換する@samp{%}シーケンスを含めることができる。以下は@samp{%}シーケンスは何を意味するかのテーブルである:"
+msgstr ""
+"この関数は@var{time} (省略か@code{nil}ならカレント時刻)を@var{format-string}に応じて文字列に変換する。\n"
+"この変換にはタイムゾーンルール@var{zone} (デフォルトはカレントのタイムゾーンルール)を使用する。@ref{Time Zone Rules}を参照のこと。引数@var{format-string}には、時刻を置換する@samp{%}シーケンスを含めることができる。以下は@samp{%}シーケンスは何を意味するかのテーブルである:"
 
 #. type: item
 #: original_texis/os.texi:1484
@@ -2723,40 +2719,34 @@ msgstr "ブランクでパディングされた年月日の日。"
 #: original_texis/os.texi:1503
 #, no-wrap
 msgid "%F"
-msgstr ""
+msgstr "%F"
 
 #. type: table
 #: original_texis/os.texi:1505
-#, fuzzy
-#| msgid "This stands for the time zone abbreviation (e.g., @samp{EST})."
 msgid "This stands for the ISO 8601 date format, i.e., @samp{\"%Y-%m-%d\"}."
-msgstr "これはタイムゾーンの短縮形(たとえば@samp{EST})を意味する。"
+msgstr "これはISO 8601の日付フォーマット @samp{\\\"%Y-%m-%d\\\"} を意味する。"
 
 #. type: item
 #: original_texis/os.texi:1505
 #, no-wrap
 msgid "%g"
-msgstr ""
+msgstr "%g"
 
 #. type: table
 #: original_texis/os.texi:1507
-#, fuzzy
-#| msgid "This stands for the year with century."
 msgid "This stands for the year corresponding to the ISO week within the century."
-msgstr "これは世紀を併なう年を意味する。"
+msgstr "これはその世紀内のISO週に対応する年を意味する。"
 
 #. type: item
 #: original_texis/os.texi:1507
 #, no-wrap
 msgid "%G"
-msgstr ""
+msgstr "%G"
 
 #. type: table
 #: original_texis/os.texi:1509
-#, fuzzy
-#| msgid "This stands for the abbreviated name of the day of week."
 msgid "This stands for the year corresponding to the ISO week."
-msgstr "これは曜日の短縮名を意味する。"
+msgstr "これはISO週に対応する年を意味する。"
 
 #. type: item
 #: original_texis/os.texi:1509 original_texis/os.texi:1618
@@ -2938,14 +2928,12 @@ msgstr "@samp{%H:%M:%S}のシノニム。"
 #: original_texis/os.texi:1543
 #, no-wrap
 msgid "%u"
-msgstr ""
+msgstr "%u"
 
 #. type: table
 #: original_texis/os.texi:1545
-#, fuzzy
-#| msgid "This stands for the numeric day of week (0--6).  Sunday is day 0."
 msgid "This stands for the numeric day of week (1--7).  Monday is day 1."
-msgstr "これは数字で表した曜日(0から6)で、日曜日が0。"
+msgstr "これは数字で表した曜日(1から7)で、月曜日が1。"
 
 #. type: item
 #: original_texis/os.texi:1545
@@ -2962,14 +2950,12 @@ msgstr "週の開始を日曜日とみなした年内の週(01から52)。"
 #: original_texis/os.texi:1548
 #, no-wrap
 msgid "%V"
-msgstr ""
+msgstr "%V"
 
 #. type: table
 #: original_texis/os.texi:1550
-#, fuzzy
-#| msgid "This stands for the day of the year (001--366)."
 msgid "This stands for the week of the year according to ISO 8601."
-msgstr "これは年内の経過日(001から366)を意味する。"
+msgstr "これはISO 8601にたいする年内の週を意味する。"
 
 #. type: item
 #: original_texis/os.texi:1550
@@ -3255,7 +3241,7 @@ msgstr "calendrical computations"
 #. type: Plain text
 #: original_texis/os.texi:1707
 msgid "These functions perform calendrical computations using time values (@pxref{Time of Day}).  A value of @code{nil} for any of their time-value arguments stands for the current system time, and a single integer number stands for the number of seconds since the epoch."
-msgstr ""
+msgstr "以下の関数はtime値を使用して暦計算を行います(@ref{Time of Day}を参照)。これらの関数のtime値を受け取るすべての引数では@code{nil}値はカレントシステム時刻、単一の整数はエポックからの経過秒数を意味します。"
 
 #. type: defun
 #: original_texis/os.texi:1708
@@ -3277,7 +3263,7 @@ msgstr "time-subtract t1 t2"
 #. type: defun
 #: original_texis/os.texi:1718
 msgid "This returns the time difference @var{t1} @minus{} @var{t2} between two time values, as a time value.  If you need the difference in units of elapsed seconds, use @code{float-time} (@pxref{Time of Day, float-time}) to convert the result into seconds."
-msgstr ""
+msgstr "これは2つのtime値の差 @var{t1} @minus{} @var{t2}をtime値としてリターンする。経過秒数を単位とする時間差が必要なら、結果を秒数に変換するために@code{float-time}を使えばよい(@ref{Time of Day, float-time}を参照)。"
 
 #. type: defun
 #: original_texis/os.texi:1720
@@ -3287,10 +3273,8 @@ msgstr "time-add t1 t2"
 
 #. type: defun
 #: original_texis/os.texi:1725
-#, fuzzy
-#| msgid "This returns the sum of two time values, one of which ought to represent a time difference rather than a point in time.  Here is how to add a number of seconds to a time value:"
 msgid "This returns the sum of two time values, as a time value.  One argument should represent a time difference rather than a point in time, either as a list or as a single number of elapsed seconds.  Here is how to add a number of seconds to a time value:"
-msgstr "これは2つのtime値の和をリターンする。ここで引数のうち1つは時間差ではなく、ある時点での時刻を表すべきである。以下に、あるtime値に秒数を加算する方法を示す:"
+msgstr "これは2つのtime値の和をtime値としてリターンする。ここで引数のうち1つは時間差ではなくリストか単一の経過秒数によりある時点での時刻を表すこと。以下はあるtime値に秒数を加算する方法:"
 
 #. type: example
 #: original_texis/os.texi:1728
@@ -3339,30 +3323,25 @@ msgstr "Timers for Delayed Execution"
 
 #. type: cindex
 #: original_texis/os.texi:1746
-#, fuzzy, no-wrap
-#| msgid "timer"
+#, no-wrap
 msgid "timers"
-msgstr "timer"
+msgstr "timers"
 
 #. type: Plain text
 #: original_texis/os.texi:1752
-#, fuzzy
-#| msgid "You can set up a @dfn{timer} to call a function at a specified future time or after a certain length of idleness."
 msgid "You can set up a @dfn{timer} to call a function at a specified future time or after a certain length of idleness.  A timer is a special object that stores the information about the next invocation times and the function to invoke."
-msgstr "将来の特定時刻や特定の長さのアイドル時間経過後に関数を呼び出すために、@dfn{タイマー(timer)}をセットアップできます。"
+msgstr "将来の特定時刻や特定の長さのアイドル時間経過後に関数を呼び出すために@dfn{タイマー(timer)}をセットアップできます。タイマーは次回の呼び出し時刻と呼び出す関数についての情報を格納したスペシャルオブジェクトです。"
 
 #. type: defun
 #: original_texis/os.texi:1753
 #, no-wrap
 msgid "timerp object"
-msgstr ""
+msgstr "timerp object"
 
 #. type: defun
 #: original_texis/os.texi:1756
-#, fuzzy
-#| msgid "This function returns @code{t} if @var{year} is a leap year."
 msgid "This predicate function returns non-@code{nil} of @code{object} is a timer."
-msgstr "この関数は、@var{year}が閏年なら@code{t}をリターンする。"
+msgstr "この述語関数は@code{object}がタイマーなら非@code{nil}をリターンする。"
 
 #. type: Plain text
 #: original_texis/os.texi:1764
