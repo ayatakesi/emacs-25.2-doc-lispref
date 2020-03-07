@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:49+0900\n"
-"PO-Revision-Date: 2020-02-09 21:07+0900\n"
+"PO-Revision-Date: 2020-03-07 20:13+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -635,7 +635,7 @@ msgstr "この関数は@var{program}を呼び出して完了するまで待機�
 #. type: defun
 #: original_texis/processes.texi:308
 msgid "The current working directory of the subprocess is set to the current buffer's value of @code{default-directory} if that is local (as determined by @code{unhandled-file-name-directory}), or \"~\" otherwise.  If you want to run a process in a remote directory use @code{process-file}."
-msgstr ""
+msgstr "サブプロセスのカレント作業ディレクトリー(CWD: current working directory)はカレントバッファーの@code{default-directory}がローカル(@code{unhandled-file-name-directory}により判断される)ならその値、それ以外は\"~\"。リモートディレクトリーでプロセスを実行したければ@code{process-file}を使用すること。"
 
 #. type: defun
 #: original_texis/processes.texi:313
@@ -1147,10 +1147,9 @@ msgstr "@var{coding}が@code{nil}なら、デフォルトのコーディング�
 
 #. type: item
 #: original_texis/processes.texi:648
-#, fuzzy, no-wrap
-#| msgid "process-connection-type"
+#, no-wrap
 msgid ":connection-type @var{type}"
-msgstr "process-connection-type"
+msgstr ":connection-type @var{type}"
 
 #. type: table
 #: original_texis/processes.texi:656
@@ -1226,7 +1225,7 @@ msgstr "実際の接続情報で修正されたオリジナルの引数リスト
 #. type: defun
 #: original_texis/processes.texi:689
 msgid "The current working directory of the subprocess is set to the current buffer's value of @code{default-directory} if that is local (as determined by `unhandled-file-name-directory'), or \"~\" otherwise.  If you want to run a process in a remote direcotry use @code{start-file-process}."
-msgstr ""
+msgstr "サブプロセスのカレント作業ディレクトリー(CWD: current working directory)はカレントバッファーの@code{default-directory}がローカル(`unhandled-file-name-directory'により判断される)ならその値、それ以外は\"~\"にセットされる。リモートディレクトリーでプロセスを実行したければ@code{start-file-process}を使用すること。"
 
 #. type: defun
 #: original_texis/processes.texi:691
