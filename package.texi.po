@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2020-02-29 01:05+0900\n"
+"PO-Revision-Date: 2020-03-08 08:47+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -160,10 +160,8 @@ msgstr "Version"
 
 #. type: table
 #: original_texis/package.texi:59
-#, fuzzy
-#| msgid "A version number, in a form that the function @code{version-to-list} understands (e.g., @samp{11.86}).  Each release of a package should be accompanied by an increase in the version number."
 msgid "A version number, in a form that the function @code{version-to-list} understands (e.g., @samp{11.86}).  Each release of a package should be accompanied by an increase in the version number so that it will be recognized as an upgrade by users querying the package archive."
-msgstr "関数@code{version-to-list}が理解できる形式のバージョン番号(たとえば@samp{11.86})。パッケージの各リリースでは、バージョン番号のアップも行うこと。"
+msgstr "関数@code{version-to-list}が理解できる形式のバージョン番号(たとえば@samp{11.86})。パッケージの各リリースではユーザーがパッケージアーカイブの問い合わせでアップグレードとして認識できるようにバージョン番号のアップも行うこと。"
 
 #. type: item
 #: original_texis/package.texi:60
@@ -195,10 +193,8 @@ msgstr "Dependencies"
 
 #. type: table
 #: original_texis/package.texi:78
-#, fuzzy
-#| msgid "A list of other packages (possibly including minimal acceptable version numbers) on which this package depends.  The list may be empty, meaning this package has no dependencies.  Otherwise, installing this package also automatically installs its dependencies; if any dependency cannot be found, the package cannot be installed."
 msgid "A list of other packages (possibly including minimal acceptable version numbers) on which this package depends.  The list may be empty, meaning this package has no dependencies.  Otherwise, installing this package also automatically installs its dependencies, recursively; if any dependency cannot be found, the package cannot be installed."
-msgstr "そのパッケージが依存する、他のパッケージ(恐らく最低のバージョン番号を含む)。このリストは空でもよく、その場合パッケージには依存パッケージがないことを意味する。それ以外なら、このパッケージをインストールすることにより、その依存パッケージも自動的にインストールされる。依存パッケージのいずれかが見つからなければ、そのパッケージをインストールすることはできない。"
+msgstr "そのパッケージが依存する他のパッケージ(恐らく最低のバージョン番号を含む)。このリストは空でもよく、その場合にはパッケージに依存パッケージがないことを意味する。それ以外ならパッケージをインストールすることにより依存パッケージも自動的かつ再帰的にインストールされる。依存パッケージのいずれかが見つからなければパッケージをインストールすることはできない。"
 
 #. type: cindex
 #: original_texis/package.texi:80
@@ -403,10 +399,8 @@ msgstr "インストールに先立ち複数パッケージはファイルとし
 
 #. type: Plain text
 #: original_texis/package.texi:219
-#, fuzzy
-#| msgid "One of the files in the content directory must be named @file{@var{name}-pkg.el}.  It must contain a single Lisp form, consisting of a call to the function @code{define-package}, described below.  This defines the package's version, brief description, and requirements."
 msgid "One of the files in the content directory must be named @file{@var{name}-pkg.el}.  It must contain a single Lisp form, consisting of a call to the function @code{define-package}, described below.  This defines the package's attributes: version, brief description, and requirements."
-msgstr "このコンテンツディレクトリー内のファイルのうち1つは、@file{@var{name}-pkg.el}という名前のファイルでなければなりません。このファイルには、以下で説明する関数@code{define-package}の呼び出しから構成される、単一のLispフォームを含まなければなりません。これは、そのパッケージのバージョン、簡単な説明(brief description)、必要条件(requirements)を定義します。"
+msgstr "このコンテンツディレクトリー内のファイルのうち1つは@file{@var{name}-pkg.el}という名前のファイルでなければなりません。このファイルには、以下で説明する関数@code{define-package}の呼び出しから構成される単一のLispフォームを含まなければなりません。これはパッケージの属性、簡単な説明(brief description)、必要条件(requirements)を定義します。"
 
 #. type: Plain text
 #: original_texis/package.texi:225
