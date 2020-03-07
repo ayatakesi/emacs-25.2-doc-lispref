@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emacs-lispref 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:49+0900\n"
-"PO-Revision-Date: 2020-01-25 04:42+0900\n"
+"PO-Revision-Date: 2020-03-07 17:06+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -661,10 +661,8 @@ msgstr "この関数は変数@code{filter-buffer-substring-function}により指
 
 #. type: defun
 #: original_texis/text.texi:241
-#, fuzzy
-#| msgid "The default filter function consults the obsolete wrapper hook @code{filter-buffer-substring-functions}, and the obsolete variable @code{buffer-substring-filters}.  If both of these are @code{nil}, it returns the unaltered text from the buffer, i.e., what @code{buffer-substring} would return."
 msgid "The default filter function consults the obsolete wrapper hook @code{filter-buffer-substring-functions} (see the documentation string of the macro @code{with-wrapper-hook} for the details about this obsolete facility), and the obsolete variable @code{buffer-substring-filters}.  If both of these are @code{nil}, it returns the unaltered text from the buffer, i.e., what @code{buffer-substring} would return."
-msgstr "デフォルトのフィルター関数は時代遅れとなったラッパーフック@code{filter-buffer-substring-functions}、および同様に時代遅れとなった変数@code{buffer-substring-filters}を参照する。これら両者が@code{nil}なら、バッファーから未変更のテキスト、すなわち@code{buffer-substring}がリターンするであろうテキストをリターンする。"
+msgstr "デフォルトのフィルター関数は時代遅れとなったラッパーフック@code{filter-buffer-substring-functions} (この時代遅れの機能に関する詳細はマクロ@code{with-wrapper-hook}のドキュメント文字列を参照のこと)、および同様に時代遅れとなった変数@code{buffer-substring-filters}を参照する。これら両者が@code{nil}なら、バッファーから未変更のテキスト、すなわち@code{buffer-substring}がリターンするであろうテキストをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:245
@@ -7353,7 +7351,7 @@ msgstr "dom-strings @var{dom}"
 #. type: table
 #: original_texis/text.texi:4576
 msgid "Return all strings in @var{dom}."
-msgstr ""
+msgstr "@var{dom}内のすべての文字列をリターンする。"
 
 #. type: Plain text
 #: original_texis/text.texi:4580
