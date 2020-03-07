@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2020-02-23 11:39+0900\n"
+"PO-Revision-Date: 2020-03-08 00:26+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2729,10 +2729,8 @@ msgstr "テキストプロパティはそのテキストの一部として考え
 
 #. type: Plain text
 #: original_texis/display.texi:1558
-#, fuzzy
-#| msgid "Since more than one overlay can specify a property value for the same character, Emacs lets you specify a priority value of each overlay.  In case two overlays have the same priority value, and one is nested in the other, then the inner one will have priority over the outer one.  If neither is nested in the other then you should not make assumptions about which overlay will prevail."
 msgid "Since more than one overlay can specify a property value for the same character, Emacs lets you specify a priority value of each overlay.  The priority value is used to decide which of the overlapping overlays will ``win''."
-msgstr "複数のオーバーレイが同じ文字にたいしてプロパティ値を指定できるので、Emacsは各オーバーレイにたいして優先度の指定を促します。2つのオーバーレイが同じ値の優先度をもち、一方が他方にネストされている場合には、内側のオーバーレイが外側のオーバーレイより高い優先度をもちます。いずれのオーバーレイも他方をネストしない場合には、どちらのオーバーレイが優先されるかについて予測するべきではありません。"
+msgstr "複数のオーバーレイが同じ文字にたいしてプロパティ値を指定できるので、Emacsは各オーバーレイにたいして優先度の指定を促します。優先度の値はオーバーラップするオーバーレイのどちらが``勝つ''かを判断するために使用されます。"
 
 #. type: Plain text
 #: original_texis/display.texi:1560
@@ -2801,10 +2799,8 @@ msgstr "このプロパティの値はオーバーレイの優先度を決定す
 
 #. type: table
 #: original_texis/display.texi:1602
-#, fuzzy
-#| msgid "The priority matters when two or more overlays cover the same character and both specify the same property; the one whose @code{priority} value is larger overrides the other.  For the @code{face} property, the higher priority overlay's value does not completely override the other value; instead, its face attributes override the face attributes of the lower priority @code{face} property."
 msgid "The priority matters when two or more overlays cover the same character and both specify the same property; the one whose @code{priority} value is larger overrides the other.  (For the @code{face} property, the higher priority overlay's value does not completely override the other value; instead, its face attributes override the face attributes of the lower priority @code{face} property.)  If two overlays have the same priority value, and one is nested in the other, then the inner one will prevail over the outer one.  If neither is nested in the other then you should not make assumptions about which overlay will prevail."
-msgstr "2つ以上のオーバーレイが同じ文字をカバーし、いずれもが同じプロパティを指定する場合には、優先度が重要になる。他より@code{priority}の値が大きいほうが他をオーバーライドする。@code{face}プロパティにたいしては、より高い優先度のオーバーレイの値は、他の値を完全にはオーバーライドしない。かわりにより低い優先度の@code{face}プロパティのface属性を、高い優先度のface属性がオーバーライドする。"
+msgstr "2つ以上のオーバーレイが同じ文字をカバーし、いずれもが同じプロパティを指定する場合には、優先度が重要になる。他より@code{priority}の値が大きいほうが他をオーバーライドする。(@code{face}プロパティにたいしては、より高い優先度のオーバーレイの値は他の値を完全にはオーバーライドしない。かわりに高い優先度のface属性がより低い優先度の@code{face}プロパティのface属性をオーバーライドする)。2つのオーバーレイが同じ優先値をもち、一方がもう一方にネストされている場合には、内側のオーバーレイが外側のオーバーレイより優先される。いずれのオーバーレイも他方にネストされていなければ、どちらのオーバーレイが優先するかを仮定しないこと。"
 
 #. type: table
 #: original_texis/display.texi:1604
@@ -2814,7 +2810,7 @@ msgstr "現在のところ、すべてのオーバーレイはテキストプロ
 #. type: table
 #: original_texis/display.texi:1616
 msgid "Note that Emacs sometimes uses non-numeric priority values for some of its internal overlays, so do not try to do arithmetic on the priority of an overlay (unless it is one that you created).  In particular, the overlay used for showing the region uses a priority value of the form @w{@code{(@var{primary} . @var{secondary})}}, where the @var{primary} value is used as described above, and @var{secondary} is the fallback value used when @var{primary} and the nesting considerations fail to resolve the precedence between overlays.  However, you are advised not to design Lisp programs based on this implementation detail; if you need to put overlays in priority order, use the @var{sorted} argument of @code{overlays-at}.  @xref{Finding Overlays}."
-msgstr ""
+msgstr "Emacsは内部的ないくつかのオーバーレイに非数値の優先値を使用するときがあるので、(自分が作成したものでなければ)オーバーレイの優先度にたいして数値演算を試みてはならない。特にリージョンの表示に使用されるオーバーレイは@w{@code{(@var{primary} . @var{secondary})}} (@var{primary}は上述のように使用されて、@var{secondary}は@var{primary}とネストを考慮したオーバーレイ間の優先度の解決が失敗した際に使用される)という形式の優先値を使用する。しかしあなたにはこの実装の詳細にもとづいてLispプログラムをデザインしないようにアドバイスした。優先順にオーバーレイを配置する必要があるなら@code{overlays-at}の@var{sorted}引数を使用すること。@ref{Finding Overlays}を参照のこと。"
 
 #. type: item
 #: original_texis/display.texi:1617
@@ -3441,15 +3437,14 @@ msgstr "オプション引数@var{mode-and-header-line}が@code{nil}または省
 
 #. type: defun
 #: original_texis/display.texi:1977
-#, fuzzy, no-wrap
-#| msgid "line height"
+#, no-wrap
 msgid "line-pixel-height"
-msgstr "line height"
+msgstr "line-pixel-height"
 
 #. type: defun
 #: original_texis/display.texi:1981
 msgid "This function returns the height in pixels of the line at point in the selected window.  The value includes the line spacing of the line (@pxref{Line Height})."
-msgstr ""
+msgstr "この関数は選択されたウィンドウのポイント位置にある行の高さをピクセル単位でリターンする。値にはその行の行スペーシングが含まれる(@ref{Line Height}を参照)。"
 
 #. type: cindex
 #: original_texis/display.texi:1986
@@ -4450,10 +4445,8 @@ msgstr "この関数は@var{frame}上の@var{face}にたいする属性@var{attr
 
 #. type: defun
 #: original_texis/display.texi:2562
-#, fuzzy
-#| msgid "If @var{frame} is @code{nil}, that means the selected frame (@pxref{Input Focus}).  If @var{frame} is @code{t}, this function returns the value of the specified attribute for newly-created frames (this is normally @code{unspecified}, unless you have specified some value using @code{set-face-attribute}; see below)."
 msgid "If @var{frame} is omitted or @code{nil}, that means the selected frame (@pxref{Input Focus}).  If @var{frame} is @code{t}, this function returns the value of the specified attribute for newly-created frames (this is normally @code{unspecified}, unless you have specified some value using @code{set-face-attribute}; see below)."
-msgstr "@var{frame}が@code{nil}なら、それは選択されたフレームを意味する(@ref{Input Focus}を参照)。@var{frame}が@code{t}なら、この関数は新たに作成されるフレームにたいする、指定された属性の値をリターンする(これは下記の@code{set-face-attribute}を使用して何らかの値を指定していなければ、通常は@code{unspecified}である)。"
+msgstr "@var{frame}が省略か@code{nil}なら選択されたフレームを意味する(@ref{Input Focus}を参照)。@var{frame}が@code{t}なら、この関数は新たに作成されるフレームにたいして指定された属性の値をリターンする(これは下記の@code{set-face-attribute}を使用して何らかの値を指定していなければ通常は@code{unspecified})。"
 
 #. type: defun
 #: original_texis/display.texi:2572
@@ -4572,10 +4565,8 @@ msgstr "@var{frame}が@code{t}ならこの関数は新たに作成されるフ�
 
 #. type: Plain text
 #: original_texis/display.texi:2657
-#, fuzzy
-#| msgid "The following commands and functions mostly provide compatibility with old versions of Emacs.  They work by calling @code{set-face-attribute}.  Values of @code{t} and @code{nil} for their @var{frame} argument are handled just like @code{set-face-attribute} and @code{face-attribute}.  The commands read their arguments using the minibuffer, if called interactively."
 msgid "The following commands and functions mostly provide compatibility with old versions of Emacs.  They work by calling @code{set-face-attribute}.  Values of @code{t} and @code{nil} (or omitted) for their @var{frame} argument are handled just like @code{set-face-attribute} and @code{face-attribute}.  The commands read their arguments using the minibuffer, if called interactively."
-msgstr "以下のコマンドと関数は主として、古いバージョンのEmacsにたいする互換性のために提供されます。これらは@code{set-face-attribute}を呼び出すことにより機能します。これらの@var{frame}引数にたいする値@code{t}と@code{nil}は、@code{set-face-attribute}および@code{face-attribute}の場合と同様に処理されます。コマンドがインタラクティブに呼び出された場合は、ミニバッファーを使用して引数を読み取ります。"
+msgstr "以下のコマンドと関数は主として古いバージョンのEmacsにたいする互換性のために提供されます。これらは@code{set-face-attribute}を呼び出すことにより機能します。これらの@var{frame}引数にたいする値@code{t}と@code{nil} (や省略)は@code{set-face-attribute}や@code{face-attribute}の場合と同様に処理されます。コマンドがインタラクティブに呼び出されるとミニバッファーを使用して引数を読み取ります。"
 
 #. type: deffn
 #: original_texis/display.texi:2658
@@ -4706,10 +4697,8 @@ msgstr "face-background face &optional frame inherit"
 
 #. type: defun
 #: original_texis/display.texi:2725
-#, fuzzy
-#| msgid "These functions return the foreground color (or background color, respectively) of face @var{face}, as a string."
 msgid "These functions return the foreground color (or background color, respectively) of face @var{face}, as a string.  If the color is unspecified, they return @code{nil}."
-msgstr "これらの関数はそれぞれ、フェイス@var{face}のフォアグラウンドカラーまたはバックグラウンドカラーを、文字列としてリターンする。"
+msgstr "これらの関数はそれぞれフェイス@var{face}のフォアグラウンドカラーまたはバックグラウンドカラーを文字列としてリターンする。カラーが未指定ならをリターンする。"
 
 #. type: defun
 #: original_texis/display.texi:2727
@@ -5184,10 +5173,9 @@ msgstr "fixed-pitch"
 
 #. type: itemx
 #: original_texis/display.texi:3037
-#, fuzzy, no-wrap
-#| msgid "fixed-pitch"
+#, no-wrap
 msgid "fixed-pitch-serif"
-msgstr "fixed-pitch"
+msgstr "fixed-pitch-serif"
 
 #. type: itemx
 #: original_texis/display.texi:3038
@@ -7056,10 +7044,9 @@ msgstr "この関数はフレーム@var{frame}のスクロールバーのタイ�
 
 #. type: defun
 #: original_texis/display.texi:4188
-#, fuzzy, no-wrap
-#| msgid "frame-current-scroll-bars &optional frame"
+#, no-wrap
 msgid "frame-scroll-bar-width &optional frame"
-msgstr "frame-current-scroll-bars &optional frame"
+msgstr "frame-scroll-bar-width &optional frame"
 
 #. type: defun
 #: original_texis/display.texi:4191
@@ -7068,10 +7055,9 @@ msgstr "この関数はウィンドウ@var{window}にたいして垂直スクロ
 
 #. type: defun
 #: original_texis/display.texi:4193
-#, fuzzy, no-wrap
-#| msgid "frame-current-scroll-bars &optional frame"
+#, no-wrap
 msgid "frame-scroll-bar-height &optional frame"
-msgstr "frame-current-scroll-bars &optional frame"
+msgstr "frame-scroll-bar-height &optional frame"
 
 #. type: defun
 #: original_texis/display.texi:4196
@@ -7852,22 +7838,18 @@ msgstr "(raise @var{factor})"
 
 #. type: table
 #: original_texis/display.texi:4677
-#, fuzzy
-#| msgid "This kind of display specification raises or lowers the text it applies to, relative to the baseline of the line."
 msgid "This kind of display specification raises or lowers the text it applies to, relative to the baseline of the line.  It is mainly meant to support display of subscripts and superscripts."
-msgstr "この種のディスプレイ仕様は、その行のベースラインに相対的に、テキストを上(raise)、または下(lower)に指定する。"
+msgstr "この種のディスプレイ仕様は、その行のベースラインに相対的にテキストを上(raise)、または下(lower)に指定する。これは主に上付き文字と下付き文字を意図している。"
 
 #. type: table
 #: original_texis/display.texi:4682
-#, fuzzy
-#| msgid "@var{factor} must be a number, which is interpreted as a multiple of the height of the affected text.  If it is positive, that means to display the characters raised.  If it is negative, that means to display them lower down."
 msgid "The @var{factor} must be a number, which is interpreted as a multiple of the height of the affected text.  If it is positive, that means to display the characters raised.  If it is negative, that means to display them lower down."
-msgstr "@var{factor}は、影響を受けるテキストの高さにたいする乗数として解釈される数値でなければならない。これが正なら、その文字を上に、負なら下に表示することを意味する。"
+msgstr "@var{factor}は影響を受けるテキストの高さにたいする乗数として解釈される数値でなければならない。これが正なら上、負なら下に文字を表示することを意味する。"
 
 #. type: table
 #: original_texis/display.texi:4690
 msgid "Note that if the text also has a @code{height} display specification, which was specified before (i.e.@: to the left of) @code{raise}, the latter will affect the amount of raising or lowering in pixels, because that is based on the height of the text being raised.  Therefore, if you want to display a sub- or superscript that is smaller than the normal text height, consider specifying @code{raise} before @code{height}."
-msgstr ""
+msgstr "テキストが@code{raise}より前(左)に指定された@code{height}ディスプレイ仕様をもつ場合には、テキストが上下される量はテキストの高さにもとづくので、上下されるピクセル数には@code{raise}が効果をもつ。したがって通常のテキスト高さより小さい上付きや下付きで表示したければ、@code{height}の前に@code{raise}を指定することを考慮するべきである。"
 
 #. type: Plain text
 #: original_texis/display.texi:4706
@@ -8688,14 +8670,13 @@ msgstr "ImageMagickのサポートつきでEmacsをビルドした場合には�
 #. type: Plain text
 #: original_texis/display.texi:5174
 msgid "To check for ImageMagick support, use the following:"
-msgstr ""
+msgstr "ImageMagickサポートをチェックするには以下を使用してください:"
 
 #. type: lisp
 #: original_texis/display.texi:5177
-#, fuzzy, no-wrap
-#| msgid "image-type-available-p type"
+#, no-wrap
 msgid "(image-type-available-p 'imagemagick)\n"
-msgstr "image-type-available-p type"
+msgstr "(image-type-available-p 'imagemagick)\n"
 
 #. type: defun
 #: original_texis/display.texi:5179
@@ -11743,10 +11724,8 @@ msgstr "ns"
 
 #. type: table
 #: original_texis/display.texi:6973
-#, fuzzy
-#| msgid "Emacs is displaying the frame using the Nextstep interface (used on GNUstep and Mac OS X)."
 msgid "Emacs is displaying the frame using the Nextstep interface (used on GNUstep and macOS)."
-msgstr "EmacsはNextstepインターフェイスを使用してフレームを表示している(GNUstepとMac OS Xで使用されている)。"
+msgstr "EmacsはNextstepインターフェイスを使用してフレームを表示している(GNUstepとmacOSで使用されている)。"
 
 #. type: item
 #: original_texis/display.texi:6973
