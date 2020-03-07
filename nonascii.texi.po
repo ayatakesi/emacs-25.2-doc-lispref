@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:48+0900\n"
-"PO-Revision-Date: 2020-01-26 18:04+0900\n"
+"PO-Revision-Date: 2020-03-07 19:16+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -348,7 +348,7 @@ msgstr "exact"
 #. type: table
 #: original_texis/nonascii.texi:146
 msgid "The result must be accurate.  The function may need to encode and decode a large part of the buffer, which is expensive and can be slow."
-msgstr ""
+msgstr "正確な結果でなければならない。関数は高価で低速になり得るバッファーの大きな範囲のエンコードとデコードを要するかもしれない。"
 
 #. type: item
 #: original_texis/nonascii.texi:146
@@ -1672,24 +1672,20 @@ msgstr "@dfn{文字コード変換(character code conversion)}により、Emacs�
 
 #. type: vindex
 #: original_texis/nonascii.texi:1005
-#, fuzzy, no-wrap
-#| msgid "utf-8-emacs@r{ coding system}"
+#, no-wrap
 msgid "undecided@r{ coding system}"
-msgstr "utf-8-emacs@r{ coding system}"
+msgstr "undecided@r{ coding system}"
 
 #. type: vindex
 #: original_texis/nonascii.texi:1006
-#, fuzzy, no-wrap
-#| msgid "utf-8-emacs@r{ coding system}"
+#, no-wrap
 msgid "prefer-utf-8@r{ coding system}"
-msgstr "utf-8-emacs@r{ coding system}"
+msgstr "prefer-utf-8@r{ coding system}"
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1013
-#, fuzzy
-#| msgid "Every coding system specifies a particular set of character code conversions, but the coding system @code{undecided} is special: it leaves the choice unspecified, to be chosen heuristically for each file, based on the file's data."
 msgid "Every coding system specifies a particular set of character code conversions, but the coding system @code{undecided} is special: it leaves the choice unspecified, to be chosen heuristically for each file, based on the file's data.  The coding system @code{prefer-utf-8} is like @code{undecided}, but it prefers to choose @code{utf-8} when possible."
-msgstr "コーディングシステムはそれぞれ特定の文字コード変換セットを指定しますが、@code{undecided}というコーディングシステムは特別です。これはそれぞれのファイルにたいして、そのファイルのデータにもとづいて発見的に選択が行われるように、選択を未指定のままにします。"
+msgstr "コーディングシステムはそれぞれ特定の文字コード変換セットを指定しますが、@code{undecided}というコーディングシステムは特別です。これはそれぞれのファイルにたいして、そのファイルのデータにもとづいて発見的に選択が行われるように選択を未指定のままにします。コーディングシステム@code{prefer-utf-8}は@code{undecided}と似ていますが、可能なら@code{utf-8}を優先的に選択します。"
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1020
@@ -1726,10 +1722,8 @@ msgstr "line end conversion"
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1042
-#, fuzzy
-#| msgid "@dfn{End of line conversion} handles three different conventions used on various systems for representing end of line in files.  The Unix convention, used on GNU and Unix systems, is to use the linefeed character (also called newline).  The DOS convention, used on MS-Windows and MS-DOS systems, is to use a carriage-return and a linefeed at the end of a line.  The Mac convention is to use just carriage-return.  (This was the convention used on the Macintosh system prior to OS X.)"
 msgid "@dfn{End of line conversion} handles three different conventions used on various systems for representing end of line in files.  The Unix convention, used on GNU and Unix systems, is to use the linefeed character (also called newline).  The DOS convention, used on MS-Windows and MS-DOS systems, is to use a carriage-return and a linefeed at the end of a line.  The Mac convention is to use just carriage-return.  (This was the convention used in Classic Mac OS.)"
-msgstr "@dfn{行末変換(end of line conversion: 改行変換)}は、ファイル内の行末を表すために、さまざまなシステム上で使用される3つの異なる慣例を扱います。GNUやUnixシステムで使用されるUnixの慣例では、LF文字(linefeed文字、改行とも呼ばれる)が使用されます。MS-WindowsやMS-DOSシステムで使用されるDOSの慣例では、行末にCR文字(carriage-return文字、復帰文字とも呼ばれる)とLF文字が使用されますMacの慣例ではCR文字だけが使用されます(これはOS X以前のMacintoshシステムで使用されていた慣例である)。"
+msgstr "@dfn{行末変換(end of line conversion: 改行変換)}は、ファイル内の行末を表すために、さまざまなシステム上で使用される3つの異なる慣例を扱います。GNUやUnixシステムで使用されるUnixの慣例では、LF文字(linefeed文字、改行とも呼ばれる)が使用されます。MS-WindowsやMS-DOSシステムで使用されるDOSの慣例では、行末にCR文字(carriage-return文字、復帰文字とも呼ばれる)とLF文字が使用されますMacの慣例ではCR文字だけが使用されます(古典的なMac OSシステムで使用されていた慣例)。"
 
 #. type: cindex
 #: original_texis/nonascii.texi:1043
@@ -1851,10 +1845,8 @@ msgstr "コーディングシステムの主な目的はファイルの読み込
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1120
-#, fuzzy
-#| msgid "You can specify the coding system to use either explicitly (@pxref{Specifying Coding Systems}), or implicitly using a default mechanism (@pxref{Default Coding Systems}).  But these methods may not completely specify what to do.  For example, they may choose a coding system such as @code{undefined} which leaves the character code conversion to be determined from the data.  In these cases, the I/O operation finishes the job of choosing a coding system.  Very often you will want to find out afterwards which coding system was chosen."
 msgid "You can specify the coding system to use either explicitly (@pxref{Specifying Coding Systems}), or implicitly using a default mechanism (@pxref{Default Coding Systems}).  But these methods may not completely specify what to do.  For example, they may choose a coding system such as @code{undecided} which leaves the character code conversion to be determined from the data.  In these cases, the I/O operation finishes the job of choosing a coding system.  Very often you will want to find out afterwards which coding system was chosen."
-msgstr "使用するコーディングシステムは明示的(@ref{Specifying Coding Systems}を参照)、またはデフォルトメカニズム(@ref{Default Coding Systems}を参照)を使用により暗黙的に指定できます。しかしきれらの手法は、何を行うかを完全には指定しないかもしれません。たとえば、これらはデータから文字コード変換を行わない@code{undefined}のようなコーディングシステムを選択するかもしれません。このような場合、I/O処理はコーディングシステム選択により、その処理を完了します。後でどのコーディングシステムが選択されたか調べたいことが、頻繁にあるでしょう。"
+msgstr "使用するコーディングシステムは明示的(@ref{Specifying Coding Systems}を参照)、またはデフォルトメカニズム(@ref{Default Coding Systems}を参照)を使用により暗黙的に指定できます。しかしこれらの手法は何を行うかを完全には指定しないかもしれません。たとえば、これらはデータから文字コード変換を行わない@code{undecided}のようなコーディングシステムを選択するかもしれません。このような場合、I/O処理はコーディングシステム選択により処理を完了します。後でどのコーディングシステムが選択されたか調べたいことが頻繁にあるでしょう。"
 
 #. type: defvar
 #: original_texis/nonascii.texi:1121
@@ -2300,17 +2292,13 @@ msgstr "これらのうちいずれかのコーディングシステムが指定
 
 #. type: defun
 #: original_texis/nonascii.texi:1423
-#, fuzzy
-#| msgid "@var{default-coding-system} can also be a list whose first element is t and whose other elements are coding systems.  Then, if no coding system in the list can handle the text, @code{select-safe-coding-system} queries the user immediately, without trying any of the three alternatives described above."
 msgid "@var{default-coding-system} can also be a list whose first element is @code{t} and whose other elements are coding systems.  Then, if no coding system in the list can handle the text, @code{select-safe-coding-system} queries the user immediately, without trying any of the three alternatives described above.  This is handy for checking only the coding systems in the list."
-msgstr "@var{default-coding-system}は、最初の要素がtで、他の要素がコーディングシステムであるようなリストかもしれない。その場合、もしリスト内にテキストを処理できるコーディングシステムがなければ、@code{select-safe-coding-system}は上述した3つの代替えいずれを試みることなく、即座にユーザーに問い合わせる。"
+msgstr "@var{default-coding-system}は、最初の要素が@code{t}で他の要素がコーディングシステムであるようなリストかもしれない。その場合にはリスト内にテキストを処理できるコーディングシステムがなければ、@code{select-safe-coding-system}は上述した3つの代替えいずれを試みることなく即座にユーザーに問い合わせる。これはリスト内のコーディングシステムだけをチェックするのに手軽。"
 
 #. type: defun
 #: original_texis/nonascii.texi:1433
-#, fuzzy
-#| msgid "The optional argument @var{accept-default-p}, if non-@code{nil}, should be a function to determine whether a coding system selected without user interaction is acceptable. @code{select-safe-coding-system} calls this function with one argument, the base coding system of the selected coding system.  If @var{accept-default-p} returns @code{nil}, @code{select-safe-coding-system} rejects the silently selected coding system, and asks the user to select a coding system from a list of possible candidates."
 msgid "The optional argument @var{accept-default-p} determines whether a coding system selected without user interaction is acceptable.  If it's omitted or @code{nil}, such a silent selection is always acceptable.  If it is non-@code{nil}, it should be a function; @code{select-safe-coding-system} calls this function with one argument, the base coding system of the selected coding system.  If the function returns @code{nil}, @code{select-safe-coding-system} rejects the silently selected coding system, and asks the user to select a coding system from a list of possible candidates."
-msgstr "オプション引数@var{accept-default-p}が非@code{nil}なら、それはユーザーとの対話なしで選択されたコーディングシステムが許容できるかどうかを判断する関数であること。@code{select-safe-coding-system}は、選択されたコーディングシステムのベースコーディングシステムを唯一の引数として、この関数を呼び出す。@var{accept-default-p}が@code{nil}うちリターンしたら、@code{select-safe-coding-system}は黙って選択されたコーディングシステムを拒絶して、可能な候補リストからコーディングシステムの選択をユーザーに求める。"
+msgstr "オプション引数@var{accept-default-p}はユーザーとの対話なしで選択されたコーディングシステムを許容するかどうかを決定する。これが省略か@code{nil}なら、そのような暗黙の選択は常に許容される。非@code{nil}なら関数であること。@code{select-safe-coding-system}は選択するコーディングシステムのベースとなるコーディングシステムを単一の引数としてその関数を呼び出す。関数が@code{nil}をリターンしたら@code{select-safe-coding-system}は黙って選択されたコーディングシステムを拒絶して、可能な候補リストからコーディングシステムの選択をユーザーに求める。"
 
 #. type: vindex
 #: original_texis/nonascii.texi:1434
@@ -2330,15 +2318,14 @@ msgstr "最後のステップとして選択されたコーディングシステ
 
 #. type: defvar
 #: original_texis/nonascii.texi:1453
-#, fuzzy, no-wrap
-#| msgid "select-safe-coding-system-accept-default-p"
+#, no-wrap
 msgid "select-safe-coding-system-function"
-msgstr "select-safe-coding-system-accept-default-p"
+msgstr "select-safe-coding-system-function"
 
 #. type: defvar
 #: original_texis/nonascii.texi:1463
 msgid "This variable names the function to be called to request the user to select a proper coding system for encoding text when the default coding system for an output operation cannot safely encode that text.  The default value of this variable is @code{select-safe-coding-system}.  Emacs primitives that write text to files, such as @code{write-region}, or send text to other processes, such as @code{process-send-region}, normally call the value of this variable, unless @code{coding-system-for-write} is bound to a non-@code{nil} value (@pxref{Specifying Coding Systems})."
-msgstr ""
+msgstr "この変数は出力処理がテキストを安全にエンコードできないときに、テキストをエンコードするための正しいコーディングシステムの選択をユーザーに求めるために呼び出される関数。この変数のデフォルト値は@code{select-safe-coding-system}。@code{write-region}のようにテキストをファイルに書き込んだり、@code{process-send-region}のように別プロセスにテキストを送信するEmacsプリミティブは、@code{coding-system-for-write}が@code{nil}にバインドされていれば、通常はこの変数の値を呼び出す(@ref{Specifying Coding Systems}を参照)。"
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1467
@@ -2686,10 +2673,8 @@ msgstr "coding-system-for-write"
 
 #. type: defvar
 #: original_texis/nonascii.texi:1728
-#, fuzzy
-#| msgid "This works much like @code{coding-system-for-read}, except that it applies to output rather than input.  It affects writing to files, as well as sending output to subprocesses and net connections."
 msgid "This works much like @code{coding-system-for-read}, except that it applies to output rather than input.  It affects writing to files, as well as sending output to subprocesses and net connections.  It also applies to encoding command-line arguments with which Emacs invokes subprocesses."
-msgstr "これは@code{coding-system-for-read}と同じように機能するが、入力ではなく出力に適用される点が異なる。これはファイルへの書き込み、同様にサブプロセスおよびネットワークストリームへの出力の送信にも適用される。"
+msgstr "これは@code{coding-system-for-read}と同じように機能するが、入力ではなく出力に適用される点が異なる。これはファイルへの書き込み、同様にサブプロセスやネットワークストリームへの出力の送信にも適用される。これはEmacsがサブプロセスを呼び出す際のコマンドライン引数のエンコーディングにも適用される。"
 
 #. type: defvar
 #: original_texis/nonascii.texi:1733
@@ -2698,15 +2683,14 @@ msgstr "単一の操作が@code{call-process-region}や@code{start-process}の�
 
 #. type: defvar
 #: original_texis/nonascii.texi:1735
-#, fuzzy, no-wrap
-#| msgid "last-coding-system-used"
+#, no-wrap
 msgid "coding-system-require-warning"
-msgstr "last-coding-system-used"
+msgstr "coding-system-require-warning"
 
 #. type: defvar
 #: original_texis/nonascii.texi:1750
 msgid "Binding @code{coding-system-for-write} to a non-@code{nil} value prevents output primitives from calling the function specified by @code{select-safe-coding-system-function} (@pxref{User-Chosen Coding Systems}).  This is because @kbd{C-x RET c} (@code{universal-coding-system-argument}) works by binding @code{coding-system-for-write}, and Emacs should obey user selection.  If a Lisp program binds @code{coding-system-for-write} to a value that might not be safe for encoding the text to be written, it can also bind @code{coding-system-require-warning} to a non-@code{nil} value, which will force the output primitives to check the encoding by calling the value of @code{select-safe-coding-system-function} even though @code{coding-system-for-write} is non-@code{nil}.  Alternatively, call @code{select-safe-coding-system} explicitly before using the specified encoding."
-msgstr ""
+msgstr "@code{coding-system-for-write}を非@code{nil}値にバインドすることにより@code{select-safe-coding-system-function}で指定された関数の呼び出しからの出力プリミティブを阻む(@ref{User-Chosen Coding Systems}を参照)。これは@code{coding-system-for-write}をバインドすることにより@kbd{C-x RET c} (@code{universal-coding-system-argument})は機能するとともに、Emacsはユーザーの選択にしたがうべきであるから。@code{coding-system-for-write}にたいして、書き込むテキストのエンコーディングに安全ではないかもしれないエンコーディングをLispプログラムがバインドする場合には、@code{coding-system-require-warning}にも非@code{nil}値をバインドすること。これはたとえ@code{coding-system-for-write}が非@code{nil}でも、@code{select-safe-coding-system-function}の値を呼び出すことにより出力プリミティブにエンコーディングのチェックを強制する。あるいは指定されたエンコーディングを使用する前に明示的に@code{select-safe-coding-system}を呼び出すこと。"
 
 #. type: defopt
 #: original_texis/nonascii.texi:1752
