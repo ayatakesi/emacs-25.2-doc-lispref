@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:49+0900\n"
-"PO-Revision-Date: 2020-02-01 08:57+0900\n"
+"PO-Revision-Date: 2020-03-07 19:45+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1739,46 +1739,45 @@ msgstr "オプション引数@var{paren}には以下のいずれかを指定で�
 #: original_texis/searching.texi:954
 #, no-wrap
 msgid "a string"
-msgstr ""
+msgstr "文字列"
 
 #. type: table
 #: original_texis/searching.texi:958
 msgid "The resulting regexp is preceded by @var{paren} and followed by @samp{\\)}, e.g. use @samp{\"\\\\(?1:\"} to produce an explicitly numbered group."
-msgstr ""
+msgstr "結果となるregexpの前に@var{paren}、後に@samp{\\)}が付加される。たとえば@samp{\"\\\\(?1:\"}を使用すると番号付きのグループを明示的に生成する。"
 
 #. type: code{#1}
 #: original_texis/searching.texi:959
-#, fuzzy, no-wrap
-#| msgid "[:word:]"
+#, no-wrap
 msgid "words"
-msgstr "[:word:]"
+msgstr "words"
 
 #. type: table
 #: original_texis/searching.texi:961
 msgid "The resulting regexp is surrounded by @samp{\\<\\(} and @samp{\\)\\>}."
-msgstr ""
+msgstr "結果となるregexpは@samp{\\<\\(}と@samp{\\)\\>}で括られる。"
 
 #. type: code{#1}
 #: original_texis/searching.texi:962
 #, no-wrap
 msgid "symbols"
-msgstr ""
+msgstr "symbols"
 
 #. type: table
 #: original_texis/searching.texi:966
 msgid "The resulting regexp is surrounded by @samp{\\_<\\(} and @samp{\\)\\_>} (this is often appropriate when matching programming-language keywords and the like)."
-msgstr ""
+msgstr "結果となるregexpは@samp{\\_<\\(}と@samp{\\)\\_>}で括られる(これはプログラミング言語のキーワードの類のマッチング時にしばしば適している)。"
 
 #. type: item
 #: original_texis/searching.texi:967
 #, no-wrap
 msgid "non-@code{nil}"
-msgstr ""
+msgstr "非@code{nil}"
 
 #. type: table
 #: original_texis/searching.texi:969
 msgid "The resulting regexp is surrounded by @samp{\\(} and @samp{\\)}."
-msgstr ""
+msgstr "結果となるregexpは@samp{\\\\(}と@samp{\\\\)}で括られる。"
 
 #. type: code{#1}
 #: original_texis/searching.texi:970 original_texis/searching.texi:1047
@@ -1789,7 +1788,7 @@ msgstr "nil"
 #. type: table
 #: original_texis/searching.texi:974
 msgid "The resulting regexp is surrounded by @samp{\\(?:} and @samp{\\)}, if it is necessary to ensure that a postfix operator appended to it will apply to the whole expression."
-msgstr ""
+msgstr "後に付加する後置演算子が式全体に適用されるために必要なら、結果となるregexpは@samp{\\(?:}と@samp{\\)}で括られる。"
 
 #. type: defun
 #: original_texis/searching.texi:978
@@ -1812,6 +1811,17 @@ msgid ""
 "           (mapconcat 'regexp-quote strings \"\\\\|\")\n"
 "           (cdr paren))))\n"
 msgstr ""
+"(defun simplified-regexp-opt (strings &optional paren)\n"
+" (let ((parens\n"
+"        (cond\n"
+"         ((stringp paren)       (cons paren \"\\\\)\"))\n"
+"         ((eq paren 'words)    '(\"\\\\<\\\\(\" . \"\\\\)\\\\>\"))\n"
+"         ((eq paren 'symbols) '(\"\\\\_<\\\\(\" . \"\\\\)\\\\_>\"))\n"
+"         ((null paren)          '(\"\\\\(?:\" . \"\\\\)\"))\n"
+"         (t                       '(\"\\\\(\" . \"\\\\)\")))))\n"
+"   (concat (car paren)\n"
+"           (mapconcat 'regexp-quote strings \"\\\\|\")\n"
+"           (cdr paren))))\n"
 
 #. type: defun
 #: original_texis/searching.texi:994
