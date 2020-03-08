@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:49+0900\n"
-"PO-Revision-Date: 2020-02-29 16:21+0900\n"
+"PO-Revision-Date: 2020-03-08 09:00+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -283,10 +283,8 @@ msgstr "unloading packages, preparing for"
 
 #. type: itemize
 #: original_texis/tips.texi:172
-#, fuzzy
-#| msgid "If loading the file adds functions to hooks, define a function @code{@var{feature}-unload-hook}, where @var{feature} is the name of the feature the package provides, and make it undo any such changes.  Using @code{unload-feature} to unload the file will run this function.  @xref{Unloading}."
 msgid "If loading the file adds functions to hooks, define a function @code{@var{feature}-unload-function}, where @var{feature} is the name of the feature the package provides, and make it undo any such changes.  Using @code{unload-feature} to unload the file will run this function.  @xref{Unloading}."
-msgstr "そのファイルをロードすることにより、フックに関数が追加されるなら、@code{@var{feature}-unload-hook}という関数を定義すること。ここで@var{feature}は、そのパッケージが提供する機能の名前で、そのような変更をアンドゥするためのフックにする。そのファイルのアンロードに@code{unload-feature}を使用することにより、この関数が実行されるようになる。@ref{Unloading}を参照のこと。"
+msgstr "そのファイルをロードすることによりフックに関数が追加されるなら、@code{@var{feature}-unload-function}という関数を定義すること。ここで@var{feature}はパッケージが提供する機能の名前であり、そのような変更をアンドゥするためのフックにする。そのファイルのアンロードに@code{unload-feature}を使用することにより、この関数が実行されるようになる。@ref{Unloading}を参照のこと。"
 
 #. type: itemize
 #: original_texis/tips.texi:178
@@ -1223,10 +1221,9 @@ msgstr ""
 
 #. type: group
 #: original_texis/tips.texi:935
-#, fuzzy, no-wrap
-#| msgid ";; Copyright (C) 2010-2015 Your Name\n"
+#, no-wrap
 msgid ";; Copyright (C) 2010-2017 Your Name\n"
-msgstr ";; Copyright (C) 2010-2015 Your Name\n"
+msgstr ";; Copyright (C) 2010-2017 Your Name\n"
 
 #. type: smallexample
 #: original_texis/tips.texi:940
@@ -1429,17 +1426,14 @@ msgstr "これが存在する場合にはカレントパッケージが正しく
 
 #. type: table
 #: original_texis/tips.texi:1056
-#, fuzzy
-#| msgid "Its format is a list of lists.  The @code{car} of each sub-list is the name of a package, as a symbol.  The @code{cadr} of each sub-list is the minimum acceptable version number, as a string.  For instance:"
 msgid "Its format is a list of lists on a single line.  The @code{car} of each sub-list is the name of a package, as a symbol.  The @code{cadr} of each sub-list is the minimum acceptable version number, as a string that can be parse by @code{version-to-list}.  An entry that lacks a version (i.e., an entry which is just a symbol, or a sub-list of one element) is equivalent to entry with version \"0\".  For instance:"
-msgstr "これのフォーマットは、リストのリストである。サブリストそれぞれの@code{car}は、パッケージの名前(シンボル)、@code{cadr}は許容できる最小のバージョン番号(文字列)。たとえば:"
+msgstr "このフォーマットは単一行からなるリストのリスト。サブリストの@code{car}はそれぞれパッケージの名前(シンボル)、@code{cadr}は@code{version-to-list}でパース可能な許容し得る最小のバージョン番号(文字列)。バージョンが欠落したエントリー(単なるシンボルやある要素のサブリストであるようなエントリー)はバージョンが\"0\"のエントリーと等価。たとえば:"
 
 #. type: smallexample
 #: original_texis/tips.texi:1059
-#, fuzzy, no-wrap
-#| msgid ";; Package-Requires: ((gnus \"1.0\") (bubbles \"2.7.2\"))\n"
+#, no-wrap
 msgid ";; Package-Requires: ((gnus \"1.0\") (bubbles \"2.7.2\") cl-lib (seq))\n"
-msgstr ";; Package-Requires: ((gnus \"1.0\") (bubbles \"2.7.2\"))\n"
+msgstr ";; Package-Requires: ((gnus \"1.0\") (bubbles \"2.7.2\") cl-lib (seq))\n"
 
 #. type: table
 #: original_texis/tips.texi:1064
