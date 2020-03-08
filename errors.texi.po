@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-03-01 01:47+0900\n"
-"PO-Revision-Date: 2020-03-01 01:03+0900\n"
+"PO-Revision-Date: 2020-03-08 09:18+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -451,8 +451,6 @@ msgstr "wrong-number-of-arguments"
 
 #. type: table
 #: original_texis/errors.texi:194
-#, fuzzy
-#| msgid "The message is @samp{Wrong number of arguments}.  @xref{Classifying Lists}."
 msgid "The message is @samp{Wrong number of arguments}.  @xref{Argument List}."
 msgstr "メッセージは@samp{Wrong number of arguments}。@ref{Classifying Lists}を参照のこと。"
 
